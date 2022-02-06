@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font_awesome/css/all.css">
+    <link rel="stylesheet" href="./font_awesome/css/all.min.css">
+<link rel="shortcut icon" type="image/png" href="./video-player.png"/>
+
+    <title>Player</title>
+</head>
+
+<body>
+    <div class=" main_container">
+
+        <div class="player" ondblclick="full_screen()">
+            <span class="onone box_show_volume">100%</span>
+            <span class="onone  volume_show_container">
+            <i id="volume_show_icon" class="fas fa-volume-up"></i>
+
+            </span>
+            <video id="main_video"  >
+            
+            </video>
+
+            <i id="play_pause_btn" class="fas fa-play-circle"></i>
+            
+            <div class="menu mid_screen cflex_center_nowrap">
+                <div class="rflex_center_nowrap progress_bar_container">
+                    <span class="progress_bar_upper">
+
+                        <span class="progress_bar_inner"></span>
+                    </span>
+                </div>
+
+                <!--  controller  -->
+                <div class="controller_container">
+                    <!--left  controller  -->
+                    <div class="rflex_center_nowrap left_controller">
+
+                        <!-- <span class="previous_btn"><i class="fas fa-backward"></i></span> -->
+                        <span class="play_btn">
+                            <i id="controller_play_pause_icon" class="fas fa-play"></i>
+                           
+                        </span>
+                        <!-- <span class="next_btn"><i class="fas fa-forward"></i></span> -->
+                        <span class="rflex_center_nowrap volume">
+                            <div id="volume_icon_container">
+
+                                <i id="volume_icon" class="fa fa-volume-up"></i>
+                            </div>
+                            <span class="volume_span ">
+
+                                <span style="border-radius: 50px;" class="volume_bar"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- right controller  -->
+                    <div class="right_controller">
+
+                        <div class="time">
+
+                         
+                            <span class="time_div"></span> 
+                        </div>
+                        <select name="speed" class="border_outline_none " id="speed">
+                            <option class="options" value="0.25">0.2 x</option>
+                            <option class="options" value="0.5">0.5 x</option>
+                            <option class="options" value="0.75">0.7 x</option>
+                            <option selected class="options" value="1.0">normal</option>
+                            <option class="options" value="1.25">1.2 x</option>
+                            <option class="options" value="1.5">1.5 x</option>
+                            <option class="options" value="1.75">1.7 x</option>
+                            <option class="options" value="2.0">2.0 x</option>
+                        </select>
+                        <span class="screen_resizer"><i class="fas fa-expand"></i></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input id="browse_video_input" type="file" onchange="change_video(this);"  class="selectBtn " style="display: none;" value="Select Video">
+          <button id="video_choose">Choose Video</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
