@@ -170,7 +170,7 @@ html,body{
 .main_container{
     min-height: 100vh;
 display: flex;
-background: radial-gradient(black, #130303e6);
+background: linear-gradient( 131deg , #2f293a, #2d5568);
 background-position: bottom;
 flex-direction: column;
 
@@ -417,6 +417,7 @@ font-size: 2.3rem;
     color: white;
     position: absolute;
     top: 50%;
+    text-shadow: 1px 1px 12px #00000099;
     left: 50%;
     opacity: 0;
     transition: 1s;
